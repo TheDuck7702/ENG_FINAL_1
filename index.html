@@ -1,0 +1,332 @@
+<!--Shayaan.is.sleepy//The_Duck-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>How Our Roots Change Our Mind</title>
+  <style>
+    html, body {
+      height: 100vh;
+      margin: 0;
+      font-family: 'Georgia', serif;
+      scroll-behavior: smooth;
+      background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      color: #fff;
+      padding: 0;
+      animation: fadeIn 2s ease-in;
+    }
+
+    .overlay {
+      padding: 3rem;
+      min-height: 100vh;
+    }
+
+    .wrapper {
+      max-width: 900px;
+      background: rgba(255, 255, 255, 0.95);
+      margin: auto;
+      padding: 3rem;
+      border-radius: 16px;
+      box-shadow: 0 12px 50px rgba(0, 0, 0, 0.4);
+      color: #222;
+      animation: slideUp 1s ease-out;
+    }
+
+    h1 {
+      text-align: center;
+      color: #0a3d62;
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p.subtitle {
+      text-align: center;
+      font-style: italic;
+      color: #555;
+      margin-bottom: 2rem;
+    }
+
+    .article-content p {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .article-content h2 {
+      font-size: 1.4rem;
+      margin-top: 2rem;
+      color: #104e8b;
+    }
+
+    .quote {
+      background: #e0f7fa;
+      border-left: 6px solid #0fa3b1;
+      padding: 1rem;
+      font-style: italic;
+      border-radius: 8px;
+      margin: 2rem 0;
+      animation: fadeIn 2s ease-in forwards;
+      opacity: 0;
+    }
+
+    /* Animate quote */
+    .quote.visible {
+      opacity: 1;
+    }
+
+    .nav-buttons {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .nav-buttons button {
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 25px;
+      border: 2px solid #0fa3b1;
+      background-color: transparent;
+      color: #0fa3b1;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .nav-buttons button:hover {
+      background-color: #0fa3b1;
+      color: white;
+    }
+
+    /* Images */
+    .article-image {
+      width: 100%;
+      max-height: 250px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin: 1.5rem 0;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      animation: fadeInUp 1.5s ease forwards;
+      opacity: 0;
+    }
+
+    /* Comments */
+    .comments-section, .reviews-section {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 2px solid #0fa3b1;
+    }
+
+    .section-title {
+      color: #0a3d62;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    /* Individual comment/review */
+    .comment, .review {
+      background: #f0f8ff;
+      border-radius: 12px;
+      padding: 1rem 1.5rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 5px 15px rgba(15,163,177,0.3);
+    }
+
+    .comment strong, .review strong {
+      color: #0a3d62;
+    }
+
+    /* Form styling */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    form input[type="text"], form textarea {
+      padding: 0.8rem 1rem;
+      border: 2px solid #0fa3b1;
+      border-radius: 10px;
+      font-family: 'Georgia', serif;
+      font-size: 1rem;
+      resize: vertical;
+    }
+
+    form button {
+      align-self: flex-start;
+      background-color: #0fa3b1;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    form button:hover {
+      background-color: #0a3d62;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <div class="wrapper">
+      <h1>How Our Roots Change Our Mind</h1>
+      <p class="subtitle">An article exploring the impact of our heritage on our thinking</p>
+
+      <div class="nav-buttons">
+        <button onclick="scrollToSection('home')">Home</button>
+        <button onclick="scrollToSection('article')">Article</button>
+        <button onclick="scrollToSection('quote')">Quote</button>
+        <button onclick="scrollToSection('end')">End</button>
+        <button onclick="scrollToSection('comments')">Comments</button>
+        <button onclick="scrollToSection('reviews')">Reviews</button>
+      </div>
+
+      <div class="article-content" id="home">
+        <p>Do you ever wonder how your origins affect the way you feel, think or even remember things? Our origins, whether social, environmental, genetic or cultural, shape our thoughts like an invisible hand. From the earliest memory to yesterday's chemistry lesson, each memory adds a layer to how we understand the world. But, in a world filled with mimicking and diverse experiences, it is essential to understand our past, lineage and culture, as it can shape and support us in more ways than one.</p>
+
+        <p>One of the strongest ways our origins influence our way of learning is through culture. Culture acts like a lens through which we see and interpret the world around us. In other cultures, learning is something that is experienced together, where students work together and share ideas. In others, it's strictly independent and solitary. These cultures shape us not only how comfortable we feel with others but how we absorb information. Some students from certain cultures thrive through learning from discussion and collaboration, while some other students from a different culture prefer independent work and practice. What I'm trying to say is that analyzing your culture and other factors can help you not only study and remember information quicker but more effectively. Another key factor that influences our learning is language. It not only helps us communicate, but also shapes how we interpret the world around us.</p>
+
+        <img class="article-image" src="https://github.com/TheDuck7702/ENG_FINAL_1/blob/main/lang3.png?raw=true" alt="this image is not working because [ERROR 512] If ur Mrs Urquhart than look at the googe doc in google clasrpom for the image" loading="lazy" />
+        <p style="text-align:center; font-style:italic; color:#555;">Students working together vs. students in standardized test</p>
+
+        <p>Language also plays a significant role in how we learn. The first language we learn to speak, builds the foundation of how we understand media today. Many bilingual people often have different perspectives as they understand more than one language. Additionally, some languages are more oral than others. This can affect how one can remember things. For example, many indigenous languages are based on storytelling. This causes people who understand that language to remember information more easily. On the other hand, languages like Italian are written more, so people from that language will remember reading things more. Moreover, some languages have extremely strict grammar rules, which can train your brain to approach math or logic problems with a different or unique perspective that differs from individuals from other languages. </p>
+
+        <img class="article-image" src="https://github.com/TheDuck7702/ENG_FINAL_1/blob/main/Lang-2.jpg?raw=true" alt="this image is not working because [ERROR 6362*] If ur Mrs Urquhart than look at the googe doc in google clasrpom for the image" loading="lazy" />
+        <p style="text-align:center; font-style:italic; color:#555;">An image of Laurel Heights, a high school in Waterloo, Ontario, that has murals of different languages saying 'Welcome'. (Taken by Shayaan Shaikh)</p>
+
+        <p>My first language was Arabic. Arabic is a very old language, more than 1445 years old. People who believe in Islam, read and study The Quran, which is read in Arabic. In fact, the Quran was first written in a type of Arabic called Quranic Arabic or Classical Arabic. Even though it is not a spoken language today, it is read by millions of people every day. Moreover, Arabic is a very dense or rich language. There is a word for almost anything. For  example, there is a word for a she-camel, and a she-camel with a child, and a she-camel who is pregnant, and a she-camel who is widowed. Because Arabic is so detailed, individuals who grew up with Arabic and are trying to learn English might have a hard time adjusting. In English, one word might be used for many meanings, while in Arabic, every small detail has its own word. This difference can even affect how someone structures an essay, or learns vocabulary. </p>
+
+        <img class="article-image" src="https://github.com/TheDuck7702/ENG_FINAL_1/blob/main/lang-1.jpg?raw=true" alt="this image is not working because [ERROR #382] If ur Mrs Urquhart than look at the googe doc in google clasrpom for the image" loading="lazy" />
+        <p style="text-align:center; font-style:italic; color:#555;">Another view of the Laurel Heights murals (Taken by Shayaan Shaikh)</p>
+
+        <p>Your genetics also play a big role with how you learn. Even though we don't really think about it, the way our brain is built affects how we take in, process and understand information. Genetics is the development of specific traits, not just physically, but mentally as well. This means that certain genetics can run through your family. These conditions are called learning disorders. They can include ADHD and dyslexia. This doesn't mean you're not smart, just that your brain is wired differently. On the other hand, some students may develop strong skills like improving memory and logic or music and sports. Genetics can be seen as a starting point. It's up to you how you want to use it to help you. Just as our genes shape our minds from the inside, our environment shapes us from the outside</p>
+
+        <div class="quote" id="quote">"To Know Yourself, You Must Know Roots"<br><strong>- Alex Haley</strong></div>
+
+        <p>The environment of where we grew up also affects our learning. Someone born in a big city with access to technology and education will learn differently than someone born in a rural village in Pakistan or Iran. We can imagine our mind like the environment we live in. Each environment is unique, with a different amount of sunlight, wind, rain and snow. All of this helps your brain to learn in different ways. In the fast-paced life of big cities, students may get used to background noises like cars honking and construction. Meanwhile, individuals from rural areas, where it's so quiet you can hear a pin drop, can be more sensitive to sound. This can affect how the two students take tests. For example, the city student might still focus well in a loud environment, while the student from the rural area might need a quiet space to concentrate.</p>
+
+        <img class="article-image" src="https://github.com/TheDuck7702/ENG_FINAL_1/blob/main/lang4.jpg?raw=true" alt="this image is not working because [ERROR #382] If ur Mrs Urquhart than look at the Google Doc in google classroom for the image" loading="lazy" />
+        <p style="text-align:center; font-style:italic; color:#555;">A photo of the Toronto Skyline, taken on the ferry to Centre Island. (Taken by Shayaan Shaikh, May 31, 2025)</p>
+
+
+        <p id="end">Understanding our roots can help us understand how we live, think and understand text and media. Every language, culture and environment we are exposed to helps to shape the strengths and struggles in how we learn. By taking time to reflect on our "origin story", we gain a powerful tool to better connect with others and the power to grow in the right direction.</p>
+      </div>
+
+      <!-- Comments Section -->
+      <section class="comments-section" id="comments">
+        <h2 class="section-title">Comments</h2>
+        <div id="comments-list">
+          <!-- Existing comments -->
+        </div>
+
+        <form id="comment-form">
+          <input type="text" id="comment-name" placeholder="Your name" required />
+          <textarea id="comment-text" placeholder="Your comment" rows="3" required></textarea>
+          <button type="submit">Add Comment</button>
+        </form>
+      </section>
+
+      <!-- Reviews Section -->
+      <section class="reviews-section" id="reviews">
+        <h2 class="section-title">Leave a Review</h2>
+        <div id="reviews-list">
+          <!-- Existing reviews -->
+        </div>
+
+        <form id="review-form">
+          <input type="text" id="review-name" placeholder="Your name" required />
+          <textarea id="review-text" placeholder="Your review" rows="3" required></textarea>
+          <button type="submit">Submit Review</button>
+        
+        <p class="subtitle">Shayaan Shaikh//shayan.is.sleepy//The_Duck</p>
+        </form>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    // Smooth scroll
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Fade in quote when page loads
+    window.addEventListener('DOMContentLoaded', () => {
+      const quote = document.querySelector('.quote');
+      quote.classList.add('visible');
+    });
+
+    // Comments handling
+    const commentsList = document.getElementById('comments-list');
+    const commentForm = document.getElementById('comment-form');
+    const commentName = document.getElementById('comment-name');
+    const commentText = document.getElementById('comment-text');
+
+    commentForm.addEventListener('submit', e => {
+      e.preventDefault();
+      const name = commentName.value.trim();
+      const text = commentText.value.trim();
+      if(name && text) {
+        const commentDiv = document.createElement('div');
+        commentDiv.className = 'comment';
+        commentDiv.innerHTML = `<strong>${escapeHTML(name)}</strong><p>${escapeHTML(text)}</p>`;
+        commentsList.appendChild(commentDiv);
+        commentForm.reset();
+      }
+    });
+
+    // Reviews handling
+    const reviewsList = document.getElementById('reviews-list');
+    const reviewForm = document.getElementById('review-form');
+    const reviewName = document.getElementById('review-name');
+    const reviewText = document.getElementById('review-text');
+
+    reviewForm.addEventListener('submit', e => {
+      e.preventDefault();
+      const name = reviewName.value.trim();
+      const text = reviewText.value.trim();
+      if(name && text) {
+        const reviewDiv = document.createElement('div');
+        reviewDiv.className = 'review';
+        reviewDiv.innerHTML = `<strong>${escapeHTML(name)}</strong><p>${escapeHTML(text)}</p>`;
+        reviewsList.appendChild(reviewDiv);
+        reviewForm.reset();
+      }
+    });
+
+    //HTML escape to avoid injection
+    function escapeHTML(str) {
+      return str.replace(/[&<>"']/g, function(m) {
+        return {
+          '&': '&amp;',
+          '<': '&lt;',
+          '>': '&gt;',
+          '"': '&quot;',
+          "'": '&#39;'
+        }[m];
+      });
+    }
+  </script>
+</body>
+</html>
